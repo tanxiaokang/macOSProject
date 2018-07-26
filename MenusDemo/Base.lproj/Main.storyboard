@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -687,11 +688,69 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-nD-3yB">
+                                <rect key="frame" x="14" y="131" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PAF-fU-QKP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="previousWithSender:" target="XfG-lQ-9wD" id="XBJ-MO-40Y"/>
+                                </connections>
+                            </button>
+                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RvO-5I-FYI">
+                                <rect key="frame" x="421" y="131" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Vd-LC-9OS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="nextWithSender:" target="XfG-lQ-9wD" id="TB0-NT-ICG"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YIu-36-Anq">
+                                <rect key="frame" x="184" y="23" width="113" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="k2s-4U-V6G">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitWithSender:" target="XfG-lQ-9wD" id="jiP-gR-9RC"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="hUR-ck-mgS">
+                                <rect key="frame" x="71" y="140" width="338" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Multiline Label" id="GnJ-y2-9wG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="RvO-5I-FYI" firstAttribute="leading" secondItem="hUR-ck-mgS" secondAttribute="trailing" constant="20" id="4Xn-Hd-s8e"/>
+                            <constraint firstItem="hUR-ck-mgS" firstAttribute="leading" secondItem="AJ5-nD-3yB" secondAttribute="trailing" constant="20" id="C1w-bb-MuV"/>
+                            <constraint firstItem="RvO-5I-FYI" firstAttribute="centerY" secondItem="AJ5-nD-3yB" secondAttribute="centerY" id="CZt-cw-HzQ"/>
+                            <constraint firstItem="YIu-36-Anq" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Cfv-z1-wSh"/>
+                            <constraint firstAttribute="trailing" secondItem="RvO-5I-FYI" secondAttribute="trailing" constant="20" id="HhF-4V-yjp"/>
+                            <constraint firstAttribute="bottom" secondItem="YIu-36-Anq" secondAttribute="bottom" constant="30" id="OE1-sV-98o"/>
+                            <constraint firstItem="AJ5-nD-3yB" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" multiplier="0.9" id="Q61-ZV-clX"/>
+                            <constraint firstItem="hUR-ck-mgS" firstAttribute="centerY" secondItem="AJ5-nD-3yB" secondAttribute="centerY" id="lb5-bC-xFO"/>
+                            <constraint firstItem="AJ5-nD-3yB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="zzx-L5-ZEv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="hUR-ck-mgS" id="Et1-cJ-aKl"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
 </document>
