@@ -13,6 +13,7 @@
 		0C8CAE4A21096D230099788B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8CAE4821096D230099788B /* Main.storyboard */; };
 		0C8CAE5321098B460099788B /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CAE5221098B460099788B /* QuotesViewController.swift */; };
 		0C8CAE572109B2CC0099788B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CAE562109B2CC0099788B /* Quote.swift */; };
+		0C8CAE592109BA6E0099788B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CAE582109BA6E0099788B /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0C8CAE4C21096D230099788B /* MenusDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MenusDemo.entitlements; sourceTree = "<group>"; };
 		0C8CAE5221098B460099788B /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		0C8CAE562109B2CC0099788B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		0C8CAE582109BA6E0099788B /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0C8CAE4221096D210099788B /* AppDelegate.swift */,
 				0C8CAE4421096D210099788B /* ViewController.swift */,
 				0C8CAE5221098B460099788B /* QuotesViewController.swift */,
+				0C8CAE582109BA6E0099788B /* EventMonitor.swift */,
 				0C8CAE562109B2CC0099788B /* Quote.swift */,
 				0C8CAE4621096D230099788B /* Assets.xcassets */,
 				0C8CAE4821096D230099788B /* Main.storyboard */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8CAE572109B2CC0099788B /* Quote.swift in Sources */,
+				0C8CAE592109BA6E0099788B /* EventMonitor.swift in Sources */,
 				0C8CAE4521096D210099788B /* ViewController.swift in Sources */,
 				0C8CAE5321098B460099788B /* QuotesViewController.swift in Sources */,
 				0C8CAE4321096D210099788B /* AppDelegate.swift in Sources */,

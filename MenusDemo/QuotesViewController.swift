@@ -29,7 +29,6 @@ class QuotesViewController: NSViewController {
     func updateQuote() {
         textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
     }
-    
 }
 
 extension QuotesViewController {
