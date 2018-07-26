@@ -12,7 +12,19 @@ class QuotesViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
     }
-    
+}
+
+extension QuotesViewController {
+    // MARK: Storyboard instantiation
+    static func freshController() -> QuotesViewController {
+        
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let identifier = NSStoryboard.SceneIdentifier(rawValue: "QuotesViewController")
+        guard let viewController = storyboard.instantiateController(withIdentifier: identifier) as? QuotesViewController else {
+            fatalError("Way cant i find QuotesViewController? - Check Main.storyboard")
+        }
+        return viewController
+    }
 }
